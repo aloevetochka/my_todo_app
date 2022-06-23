@@ -1,0 +1,23 @@
+@use "../_variables" as v;
+
+.todo-list-item {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.todo-list-item-label {
+  font-size: 24px;
+  color: v.$c-item-label;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+
+.done {
+  text-decoration: line-through;
+  color: v.$c-completed;
+}

@@ -1,0 +1,17 @@
+@use "../_variables" as v;
+
+input.form-control {
+  background-color: v.$c-bg-item;
+}
+
+.custom-input {
+  margin-bottom: 10px;
+  border: none;
+  &:focus {
+    border: none;
+    background-color: v.$c-bg-item;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}

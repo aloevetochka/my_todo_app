@@ -1,0 +1,8 @@
+@use "../_variables" as v;
+
+h1 {
+  text-align: center;
+  font-size: 96px;
+  color: v.$c-completed;
+  font-weight: v.$fw-light;
+}
