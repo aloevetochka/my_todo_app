@@ -1,7 +1,6 @@
 //styles
 import "./AppHeader.scss";
 
-//component body
 export default function AppHeader() {
   return (
     <div>

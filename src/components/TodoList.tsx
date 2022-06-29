@@ -13,7 +13,6 @@ import { ITodoListItem } from "./TodoListItem";
 //imported context
 import { ItemsContext } from "./App";
 
-//component body
 export default function TodoList() {
   const { items, filter } = React.useContext(ItemsContext);
 
@@ -33,7 +32,7 @@ export default function TodoList() {
   const elements = filteredItems(items, filter).map((item: any) => {
     const { id } = item;
     return (
-      <li key={id} className="list-group-item list-group">
+      <li key={id} className="list-group-item list-group list">
         <TodoListItem {...item} />
       </li>
     );

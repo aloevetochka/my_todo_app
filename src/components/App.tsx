@@ -16,9 +16,7 @@ import { ITodoListItem } from "./TodoListItem";
 
 //imported constants
 import { FILTER_VALUE } from "../constants";
-import { ITEMS_MOCKUP } from "../constants";
 
-//INTERFACE
 export interface AppContextInterface {
   items: ITodoListItem[];
   updateItems?: any;
@@ -26,15 +24,17 @@ export interface AppContextInterface {
   filter: string;
 }
 
-//CONTEXT
+interface IApp {
+  itemsMockup?: ITodoListItem[];
+}
+
 export const ItemsContext = createContext<AppContextInterface>({
   items: [],
   filter: FILTER_VALUE.ALL,
 });
 
-//component body
-export default function App() {
-  const [todoData, updateItems] = useState(ITEMS_MOCKUP);
+export default function App({ itemsMockup }: IApp) {
+  const [todoData, updateItems] = useState(itemsMockup || []);
   const [filter, updateFilter] = useState(FILTER_VALUE.ALL);
 
   const itemsContext = {

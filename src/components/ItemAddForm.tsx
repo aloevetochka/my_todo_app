@@ -23,7 +23,6 @@ const createNewList = (label: string, items: ITodoListItem[], id: number) => {
   ];
 };
 
-//component body
 export default function ItemAddForm() {
   const { updateItems, items = [] } = useContext(ItemsContext);
   const [value, setValue] = useState("");

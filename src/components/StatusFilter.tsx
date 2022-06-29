@@ -8,7 +8,6 @@ import { ItemsContext } from "./App";
 import { FILTER_VALUE } from "../constants";
 import { BUTTONS } from "../constants";
 
-//component body
 export default function StatusFilter() {
   const { filter, updateFilter } = React.useContext(ItemsContext);
 
