@@ -11,14 +11,12 @@ import { FiCheckCircle } from "react-icons/fi";
 //imported context
 import { ItemsContext } from "./App";
 
-//INTERFACE
 export interface ITodoListItem {
   label?: string;
   id?: number;
   completed?: boolean;
 }
 
-//component body
 export default function TodoListItem({ label, completed, id }: ITodoListItem) {
   let itemClassName = "todo-list-item-label";
   let iconClassName = "rgb(77, 73, 73)";
@@ -52,7 +50,9 @@ export default function TodoListItem({ label, completed, id }: ITodoListItem) {
           <FiCircle size="20px" color="rgb(80, 80, 80)" />
         )}
       </div>
-      <span className={itemClassName}>{label}</span>
+      <div className="span_container">
+        <span className={itemClassName}>{label}</span>
+      </div>
     </span>
   );
 }

@@ -6,7 +6,6 @@ import Counter from "./Counter";
 import DeleteBtn from "./DeleteBtn";
 import StatusFilter from "./StatusFilter";
 
-//component body
 export default function Footer() {
   return (
     <div className="footer">
